@@ -83,8 +83,7 @@ class DBStorage:
             for obj in objs:
                 if obj.id == id:
                     result = obj
-        except BaseException:
-            pass
+        excep
         return result
 
     def count(self, cls=None):
