@@ -21,8 +21,9 @@ def tear_down(self):
 
 
 @app.errorhandler(404)
-def resource_not_found(e):
-    return jsonify(error="Not found")
+def resource_notfound(e):
+    """404 on routes not found"""
+    return jsonify({"error": "Not found"}), 404
 
 
 if __name__ == '__main__':
